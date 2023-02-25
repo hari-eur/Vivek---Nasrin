@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    printf("Get 5 integers and print the biggest of all numbers without using array!\n");
+    int max = 0,data;
+    for(int i=0;i<5;i++)
+    {
+        printf("\nEnter %d number :",i+1);
+        scanf("%d",&data);
+        if(data > max)
+            max =  data;
+    }
+    printf("\n Biggest integer in the given numbers is %d",max);
+    return 0;
+}
