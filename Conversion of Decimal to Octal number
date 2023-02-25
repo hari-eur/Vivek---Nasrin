@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    printf("Decimal to Octal conversion!\n");
+    unsigned long int temp,decimal;
+    printf("\nEnter the decimal value : ");
+    scanf("%ld",&decimal);
+    temp = decimal;
+    int oct_result[100],count=0;
+    //
+    while(temp > 0)
+    {
+        oct_result[count] = temp % 8;
+        printf("\n8 | %ld - %d\n-------",temp,oct_result[count]);
+        temp = temp / 8;
+        count++;
+    }
+    printf("\n\n(%ld)decimal -> (",decimal);
+    for(int i=count-1; i>=0 ;i--)
+    {
+        printf("%d",oct_result[i]);
+    }
+    printf(")octal\n");
+    return 0;
+}
