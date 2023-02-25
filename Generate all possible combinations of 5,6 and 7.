@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    printf("Generate all possible combinations of 5,6 and 7.!\n");
+    int value[]={5,6,7},temp;
+    for(int i=0;i<3;i++)
+    {
+        printf("\n%d%d%d ",value[0],value[1],value[2]);
+        //swap last two
+        temp = value[1];
+        value[1] =  value[2];
+        value[2] = temp;
+        printf("\n%d%d%d ",value[0],value[1],value[2]);
+        //swap first two
+        temp = value[0];
+        value[0] =  value[1];
+        value[1] = temp;
+    }
+    return 0;
+}
