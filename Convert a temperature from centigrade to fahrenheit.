@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    printf("Convert a temperature from centigrade to fahrenheit.!\n");
+    printf("\n Enter the centigrade value : ");
+    double centigrade;
+    scanf("%lf",&centigrade);
+    printf("\n\n Fahrenheit = %lf",(centigrade*1.8)+32);
+    return 0;
+}
