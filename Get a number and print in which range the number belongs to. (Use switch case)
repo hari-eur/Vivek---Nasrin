@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    printf("Get a number and print in which range the number belongs to!\n");
+    printf("\n\n Enter a number : ");
+    int data ;
+    scanf("%d",&data);
+    switch(data)
+    {
+        case 100 ... 200 :
+            printf("Range between 100 - 200");
+            break;
+        case 201 ... 300 :
+            printf("Range between 201 - 300");
+            break;
+        case 301 ... 400 :
+            printf("Range between 301 - 400");
+            break;
+        default:
+            printf("out of range");
+    }
+    return 0;
+}
