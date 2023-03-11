@@ -1,0 +1,39 @@
+# include <stdio.h>
+# include <stdbool.h>
+bool is_armstrong(int value);
+
+int main()
+{
+	printf("\nFind Armstrong number between two intervals");
+	int lower_limit=10,upper_limit=100;
+	printf("\nEnter the lower and upper limit value: ");
+	scanf("%d%d",&lower_limit,&upper_limit);
+	for(int loop=lower_limit;loop<=upper_limit;loop++)
+	{
+	
+		if(is_armstrong(loop))
+			printf("armstrong number-------------------------------------------");
+		else
+			printf("Not Armstrong number"); 
+			
+	}
+	return 0;
+}
+
+bool is_armstrong(int value)
+{
+	int temp=value,sum=0;
+	while(value!=0)
+	{
+		int rem=value%10;
+		sum=sum+(rem*rem*rem);
+		value=value/10;
+	}
+	printf("\n value = %d sum = %d \t",temp,sum);
+	if(sum == temp)
+		return 1;
+	else
+		return 0;
+}
+
+
