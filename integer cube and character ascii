@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+    int num;
+    char data;
+    printf("integer cube and character ascii!\n");
+    //getting integer
+    printf("\nEnter a number and character respectively : ");
+    scanf("%d",&num);
+    //For input Clearing buffer
+    while((getchar()) != '\n');
+    //getting character
+    printf("\nEnter a character : ");
+    scanf("%c",&data);
+    printf("\nCube : %lf",pow(num, 3));
+    printf("\nAscii for %c is %d",data,data);
+    return 0;
+}
