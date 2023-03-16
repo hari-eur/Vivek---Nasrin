@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    printf("replace matrix!\n");
+
+    //int data[3][3]={{1,2,3},{4,3,5},{3,7,8}};
+    int data[5][5]={{1,2,3,4,5},{8,4,7,3,5},{3,7,8,5,9},{5,4,3,2,1},{9,8,7,5,4}};
+
+    //int limit = 3;
+    int limit = 5;
+
+    int test_element = 5;
+
+    for(int i=0;i<limit;i++)
+    {
+        for(int j=0;j<limit;j++)
+        {
+            printf("%d\t",data[i][j]);
+        }
+        printf("\n");
+    }
+
+    for(int i=1;i<limit;i++)
+    {
+        for(int j=0;j<limit;j++)
+        {
+            if(data[i][j] == test_element)
+            {
+                data[i][j] = data[i-1][j];
+            }
+        }
+    }
+
+    printf("\n result :\n");
+    for(int i=0;i<limit;i++)
+    {
+        for(int j=0;j<limit;j++)
+        {
+            printf("%d\t",data[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
