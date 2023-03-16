@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+# define print(...) printf(__VA_ARGS__)
+
+int main()
+{
+    printf("Implent the print API in MACRO.!\n");
+    char data[20],data_1[20],data_2[20];
+    printf("\n enter data:");
+    gets(data);
+
+    printf("\n enter data_1:");
+    gets(data_1);
+
+    printf("\n enter data_2:");
+    gets(data_2);
+
+    print("\nwelcome to %s \n",data);
+    print("\nhello to %s ,welcome to %s\n",data_1,data_2);
+
+    return 0;
+}
