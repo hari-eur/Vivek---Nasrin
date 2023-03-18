@@ -1,0 +1,92 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+void sort(char data_temp[]);
+
+int main()
+{
+    printf("Read the input string and pass to a FUNCTION which returns string which is sorted in following format!\n");
+    char *data="123434acibdf295869asdsd37695dfgasd";
+    printf("\nbefore swap : %s\nafter swap  : ",data);
+    //printf("\n string length : %d\n",strlen(data));
+
+
+    char *data_temp;
+    int i=0;
+    int j=0;
+    int flag = 0;
+    while(i<strlen(data))
+    {
+        char data_temp[100];
+
+        j=0;
+        while((data[i] >= 97 && data[i] <= 122 ) | ( data[i] >= 65 && data[i] <= 90) && data[i] != '\0')
+        {
+            //printf("\n alphabet : %c",data[i]);
+            data_temp[j] = data[i];
+            data_temp[j+1] = '\0';
+            //printf("\n %s ",data_temp);
+            i++;
+            j++;
+            flag = 1;
+        }
+        if(flag)
+        {
+            flag=0;
+            sort(data_temp);
+        }
+        j=0;
+        while((data[i] >= 48 && data[i] <= 57 ) && data[i] != '\0')
+        {
+            //printf("\n numbers --  : %c",data[i]);
+            data_temp[j] = data[i];
+            data_temp[j+1] = '\0';
+            //printf("\n %s ",data_temp);
+            i++;
+            j++;
+            flag=1;
+        }
+        if(flag)
+        {
+            sort(data_temp);
+        }
+
+    }
+
+
+
+
+    //a-z   97-122
+    //A-Z   65-90
+    //0-9   48-57
+
+    return 0;
+}
+
+void sort(char data_temp[])
+{
+    //printf("\nbefore sort : %s",data_temp);
+    //printf("\nsize %d",strlen(data_temp));
+
+
+    int swap_flag = 1;
+    for(int i=0;i<strlen(data_temp) - 1;i++)
+    {
+        for(int j=0;j<strlen(data_temp)-1;j++)
+        {
+            if(data_temp[j] > data_temp[j+1])
+            {
+                int temp = data_temp[j];
+                data_temp[j] = data_temp[j+1];
+                data_temp[j+1] = temp;
+                swap_flag = 0;
+            }
+        }
+        if(swap_flag)
+            break;
+    }
+    //printf("\nafter sort ----  : %s",data_temp);
+    printf("%s",data_temp);
+
+}
