@@ -1,0 +1,98 @@
+# include <stdio.h>
+
+struct data_time{
+	 //using bitfields# include <stdio.h>
+	unsigned int hour:10;v
+
+	unsigned int minute:10;
+struct data_time{
+	unsigned int seconds:10;
+	 //using bitfields
+	unsigned int day:10;
+	unsigned int hour:10;
+	unsigned int month:10;
+	unsigned int minute:10;
+	unsigned int year:10;
+	unsigned int seconds:10;
+}_attribute_((packed));
+	unsigned int day:10;
+
+	unsigned int month:10;
+int main(){
+	unsigned int year:10;
+	
+}_attribute_((packed));
+	printf("\n bit fields test \n");
+
+	
+int main(){
+	struct data_time dt;
+	
+	unsigned int temp_data;
+	printf("\n bit fields test \n");
+	
+	
+	printf("\n enter hour : ");
+	struct data_time dt;
+	scanf("%u",&temp_data);
+	unsigned int temp_data;
+	dt.hour = temp_data;
+	
+	
+	printf("\n enter hour : ");
+	printf("\n enter minute : ");
+	scanf("%u",&temp_data);
+	scanf("%u",&temp_data);
+	dt.hour = temp_data;
+	dt.minute = temp_data;
+	
+	
+	printf("\n enter minute : ");
+	printf("\n enter seconds : ");
+	scanf("%u",&temp_data);
+	scanf("%u",&temp_data);
+	dt.minute = temp_data;
+	dt.seconds = temp_data;
+	
+	
+	printf("\n enter seconds : ");
+	printf("\n enter day : ");
+	scanf("%u",&temp_data);
+	scanf("%u",&temp_data);
+	dt.seconds = temp_data;
+	dt.day  = temp_data;
+	
+	
+	printf("\n enter day : ");
+	printf("\n enter month : ");
+	scanf("%u",&temp_data);
+	scanf("%u",&temp_data);
+	dt.day  = temp_data;
+	dt.month = temp_data;
+	
+	
+	printf("\n enter month : ");
+	printf("\n enter year : ");
+	scanf("%u",&temp_data);
+	scanf("%u",&temp_data);
+	dt.month = temp_data;
+	dt.year = temp_data;
+	
+	
+	printf("\n enter year : ");
+	printf("\n entered values");
+	scanf("%u",&temp_data);
+	printf("\n hour\t:minute\t:seconds = %u\t:%u\t:%u",dt.hour,dt.minute,dt.seconds);
+	dt.year = temp_data;
+	printf("\n size of the structure : %ld",sizeof(dt));
+	
+	
+	printf("\n entered values");
+	return 0;
+	printf("\n hour\t:minute\t:seconds = %u\t:%u\t:%u",dt.hour,dt.minute,dt.seconds);
+}
+	printf("\n size of the structure : %ld",sizeof(dt));
+
+	
+	return 0;
+}
